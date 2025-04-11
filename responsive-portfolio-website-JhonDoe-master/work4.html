@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Anas-Alazzawi Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* ضبط نوع الخط */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* محاذاة النص في الوسط */
+            background-color: #f9f9f9; /* لون الخلفية */
+        }
+        header {
+            background-color: #34495e; /* لون خلفية الرأس */
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل للرأس */
+        }
+        header img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* محاذاة الصورة في الوسط */
+        }
+        .content {
+            margin-top: 20px;
+            text-align: right; /* محاذاة النص إلى اليمين */
+            padding: 0 20px;
+        }
+        .description {
+            margin-bottom: 20px;
+        }
+        .description h2 {
+            color: #2c3e50; /* لون عنوان الشرح */
+        }
+        .description p {
+            color: #7f8c8d; /* لون نص الشرح */
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: center; /* محاذاة الصور في المركز */
+            flex-wrap: wrap; /* التفاف الصور عند الحاجة */
+        }
+        .thumbnail {
+            margin: 10px;
+            transition: transform 0.2s, box-shadow 0.2s; /* تأثيرات التحويل والظل عند التحويم */
+        }
+        .thumbnail:hover {
+            transform: scale(1.1); /* تكبير الصورة عند التحويم */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل عند التحويم */
+        }
+        .thumbnail img {
+            width: 200px; /* تكبير عرض الصورة المصغرة */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* محاذاة الصورة في الوسط */
+            cursor: pointer; /* تغيير المؤشر عند التحويم */
+        }
+        #modal {
+            display: none; /* إخفاء النافذة المنبثقة في البداية */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* خلفية شفافة سوداء */
+            justify-content: center; /* محاذاة المحتوى في الوسط عمودياً */
+            align-items: center; /* محاذاة المحتوى في الوسط أفقياً */
+            z-index: 1000; /* جعل النافذة فوق كل العناصر الأخرى */
+        }
+        #modal img {
+            max-width: 80%; /* تحديد الحد الأقصى لعرض الصورة */
+            max-height: 80%; /* تحديد الحد الأقصى لارتفاع الصورة */
+        }
+        #modal .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px; /* حجم الخط لزر الإغلاق */
+            color: white;
+            cursor: pointer; /* تغيير المؤشر عند التحويم */
+        }
+        .download-link {
+            display: block;
+            margin: 20px 0;
+            font-size: 18px; /* حجم الخط للرابط */
+            color: #3498db; /* لون النص للرابط */
+            text-decoration: none; /* إزالة التسطير تحت النص */
+            border: 2px solid #3498db; /* إضافة إطار للرابط */
+            padding: 10px 20px;
+            border-radius: 5px; /* حواف دائرية للرابط */
+            transition: background-color 0.3s, color 0.3s; /* تأثيرات التغيير عند التحويم */
+        }
+        .download-link:hover {
+            background-color: #3498db; /* تغيير لون الخلفية عند التحويم */
+            color: #fff; /* تغيير لون النص عند التحويم */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- شعار التطبيق أو الصورة الرئيسية -->
+        <img src="assets/img/logo.png" alt="صورة">
+    </header>
+    <div class="content">
+        <div class="description">
+            <!-- عنوان ونص الشرح -->
+            <h2>Food APP with Admin Panel APP</h2>
+            <p>Food APP with Admin Panel APP
+            </p>
+            <!-- رابط تحميل ملف PDF -->
+            <a href="assets/pdf/جامعة بغداد .pdf" class="download-link" download>تحميل ملف PDF</a>
+        </div>
+        <div class="thumbnails">
+            <!-- صور مصغرة للمشروع -->
+            <div class="thumbnail">
+                <img src="assets/img/Screenshot_1715805050.png" alt="صورة مصغرة 1" onclick="openModal(this.src)">
+            </div>
+            <div class="thumbnail">
+                <img src="assets/img/Screenshot_1715805047.png" alt="صورة مصغرة 2" onclick="openModal(this.src)">
+            </div>
+            <div class="thumbnail">
+                <img src="assets/img/Screenshot_1715805019.png" alt="صورة مصغرة 3" onclick="openModal(this.src)">
+            </div>
+            <div class="thumbnail">
+                <img src="assets/img/Screenshot_1715804632.png" alt="صورة مصغرة 4" onclick="openModal(this.src)">
+            </div>
+            <div class="thumbnail">
+                <img src="assets/img/Screenshot_1715804569.png" alt="صورة مصغرة5" onclick="openModal(this.src)">
+            </div>
+            <div class="thumbnail">
+                <img src="assets/img/Screenshot_1715804563.png" alt="صورة مصغرة 6" onclick="openModal(this.src)">
+            </div>
+            <!-- يمكنك إضافة المزيد من الصور المصغرة هنا -->
+        </div>
+    </div>
+    <!-- النافذة المنبثقة لعرض الصور بالحجم الكامل -->
+    <div id="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="modal-img" src="">
+    </div>
+    <script>
+        // دالة لفتح النافذة المنبثقة وعرض الصورة بالحجم الكامل
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        // دالة لإغلاق النافذة المنبثقة
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
