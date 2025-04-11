@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Anas-Alazzawi Demo</title>
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/img/IMG_20240207_191932_423.jpg" type="image/x-icon">
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        /* Add your CSS here */
+        /* For Dark Mode */
+        body.dark-theme {
+            background-color: #40485add;
+            color: #000000;
+        }
+
+        /* Add your additional styles here */
+
+        /* Example: */
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #000000;
+        }
+
+        .bd-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Contact section */
+        .contact__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact__info,
+        .contact__social {
+            flex: 1 1 45%;
+            margin-bottom: 20px;
+        }
+
+        .contact__info {
+            text-align: left;
+        }
+
+        .contact__social {
+            text-align: right;
+        }
+
+        .contact__links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .contact__link {
+            text-decoration: none;
+            color: #333;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .contact__link:hover {
+            color: #000000;
+        }
+
+        .contact__social-icon {
+            color: #1b1a1a;
+            font-size: 20px;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .contact__social-icon:hover {
+            color: #000000;
+        }
+
+        .nav__logo,
+        .nav__link,
+        .footer__title,
+        .footer__text {
+            color: #f4f4f4;
+        }
+
+        .nav__link:hover,
+        .footer__social:hover,
+        .contact__link:hover,
+        .contact__social-icon:hover {
+            color: #4d4d4d;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Anas Alazzawi</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+
+        </nav>
+    </header>
+<body>
+
+
+    <main class="l-main">
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home section" id="home">
+                <div class="bd-grid home__container">
+                    <h1 class="home__title" style="margin-bottom: 20px;"><span>اذا فتحت الموقع  بهذا التوقيت فموقعي الشخصي بعده مكامل</span><br></h1>
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
+                    </div>
+                    <img src="assets/img/IMG_20240207_095556-removebg.png" alt="" class="home__img" style="transform: translateX(50%);">
+                </div>
+            </section>
+        </main>
+        
+    
+
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/IMG_20240207_095556-removebg.png" alt="">
+                </div>
+                <div>
+                    <h2 class="section-title about__subtitle">I'am Anas Alazzawi</h2>
+                    <span class="about__profession">developer</span>
+                    <p class="about__text">اذا فتحت الموقع بهذا الوقت انت اسطوره وحاب اشكرك راسل اذا جنت تريد تعرف اكثر عنه</p>
+                    <div class="about__social">
+                        <a href="#" class="about__social-icon"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#" class="about__social-icon"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="about__social-icon"><i class='bx bxl-dribbble'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <div class="skills__container bd-grid">
+                <div class="skills__box">
+                    <h2 class="section-title skills__subtitle">Development</h2>
+                    <span class="skills__name">Html</span>
+                    <span class="skills__name">Css</span>
+                    <span class="skills__name">Javascript</span>
+                    <span class="skills__name">dart</span>
+
+                    <h2 class="section-title skills__subtitle">Design</h2>
+                    <span class="skills__name">Figma</span>
+                    <span class="skills__name">Adobe XD</span>
+                </div>
+                <div class="skills__img">
+                    <img src="assets/img/Screenshot 2024-02-25 203526.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--===== PORTFOLIO =====-->
+        <section class="portfolio section" id="portfolio">
+            <div class="portfolio__container bd-grid">
+                <div class="portfolio__img">
+                    <img src="assets/img/flutter-dart.png" alt="">
+                    <div class="portfolio__link">
+                        <a href="work1.html" class="portfolio__link-name">App Projects</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="assets/img/IMG_20240207_191932_423.jpg" alt="">
+                    <div class="portfolio__link">
+                        <a href="work2.html" class="portfolio__link-name">More About Me</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="assets/img/work3.jpg" alt="">
+                    <div class="portfolio__link">
+                        <a href="#" class="portfolio__link-name">View details</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__info">
+                    <h2 class="section-title contact__subtitle">Contact Me</h2>
+                    <p class="contact__text">Feel free to get in touch with me through the following:</p>
+                    <div class="contact__links">
+                        <a href="mailto:anasfiras0044@gmail.com" class="contact__link"><i class='bx bx-mail-send'></i> Email</a>
+                        <a href="https://www.linkedin.com/" class="contact__link"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                        <a href="https://github.com/your_username" class="contact__link"><i class='bx bxl-github'></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="contact__social">
+                    <a href="#" class="contact__social-icon"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/an.f24/?hl=en" class="contact__social-icon"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="contact__social-icon"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!--===== FOOTER =====-->
+   <footer class="footer section">
+    <div class="footer__container bd-grid">
+        <div class="footer__data">
+            <h2 class="footer__title">Anas Alazzawi</h2>
+            <p class="footer__text">I'm Anas Alazzawi and this is my personal website</p>
+        </div>
+        <div class="footer__data">
+            <h2 class="footer__title">EXPLORE</h2>
+            <ul>
+                <li><a href="#home" class="footer__link">Home</a></li>
+                <li><a href="#about" class="footer__link">About</a></li>
+                <li><a href="#skills" class="footer__link">Skills</a></li>
+                <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                <li><a href="#contact" class="footer__link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer__data">
+            <h2 class="footer__title">FOLLOW</h2>
+            <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/an.f24/?hl=en" class="footer__social"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+        </div>
+    </div>
+    
+</footer>
+
+<!--===== SCROLL REVEAL =====-->
+<script src="assets/js/scrollreveal.min.js"></script>
+
+<!--===== MAIN JS =====-->
+<script src="assets/js/main.js"></script>
+
+<!-- Day/Night Toggle Script -->
+<script>
+    const themeButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeButton.onclick = function () {
+        body.classList.toggle('dark-theme');
+        if (body.classList.contains('dark-theme')) {
+            themeButton.innerHTML = '<i class="bx bxs-moon"></i>';
+        } else {
+            themeButton.innerHTML = '<i class="bx bxs-sun"></i>';
+        }
+    }
+</script>
+</body>
+
+</html>
